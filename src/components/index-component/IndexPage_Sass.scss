@@ -1,0 +1,77 @@
+//  Global Variables.
+$primaryTextColor: #efefef;
+$secondaryTextColor: #E96317;
+$lineColor: #993902;
+$linkColor: #ffffff;
+
+
+.indexPageWrapper {
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+
+  .loginWrapperButton {
+    align-self: flex-end;
+    padding: 0 5%;
+
+    .btn--custom--outline {
+      align-content: flex-end;
+      padding: 5px 15px;
+      background: transparent;
+      border: 1px solid #993902;
+      border-radius: 50px;
+      color: $secondaryTextColor;
+
+      &:hover {
+        color: $primaryTextColor;
+      }
+    };
+  };
+
+  .indexInnerWrapper {
+    align-content: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+    .leftContents {
+      text-align: center;
+      font-size: 1.4rem;
+      font-family: 'Josefin Sans', sans-serif;
+
+      .typeWriting {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+      };
+
+      .textInABoxWrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 175px;
+        background: url("../../assets/images/dotted_bg.png") center no-repeat;
+        background-size: cover;
+
+        p {
+          margin: 0 auto;
+          width: 80%;
+          font-size: 1.2rem;
+          padding: 0 10px;
+        };
+      };
+    };
+
+    .rightContents {
+
+    };
+  };
+};

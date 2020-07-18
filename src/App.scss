@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&family=Raleway:ital,wght@0,200;0,300;0,700;1,200;1,700&display=swap');
+/*  font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+*/
+
+//  Global Variables.
+$fullHeight: 100vh;
+$fullWidth: 100%;
+$primaryBackgroundColor: #efefef;
+$secondaryBackgroundColor: #ffffff;
+$primaryTextColor: #efefef;
+$secondaryTextColor: #E96317;
+$lineColor: #993902;
+$linkColor: #ffffff;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+};
+
+.App {
+  height: $fullHeight;
+  width: $fullWidth;
+  //background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./assets/images/bg_image.png") center no-repeat;
+  //background: rgba(0, 0, 0, 0.9);
+  background: #000000;
+  background-size: cover;
+  color: $primaryTextColor;
+
+  .mainContainer {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    a {
+      color: $linkColor;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondaryTextColor !important;
+      }
+    };
+
+    .appBodyContainer {
+      margin: 0;
+      padding: 0;
+      height: inherit;
+      width: 100%;
+
+      .indexPageMainContainer {
+        height: 100%;
+        width: 100%;
+      }
+
+      .userMainContainer {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+};
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+  .App {
+    height: 100%;
+    width: $fullWidth;
+  }
+}
+
+//####################################################
+//    M E D I A  Q U E R I E S
+//####################################################
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .App {
+    height: 100vh;
+    width: $fullWidth;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .App {
+    height: 100vh;
+    width: $fullWidth;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .App {
+    height: 100vh;
+    width: $fullWidth;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /*.nearbyEventsCardWrapper {
+    width: 80%;
+  }*/
+}

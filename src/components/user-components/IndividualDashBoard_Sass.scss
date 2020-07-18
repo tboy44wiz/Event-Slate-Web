@@ -1,0 +1,221 @@
+//  Global Variables.
+$primaryBackgroundColor: #efefef;
+$secondaryBackgroundColor: #ffffff;
+$primaryTextColor: #efefef;
+$secondaryTextColor: #E96317;
+$lineColor: #993902;
+
+.dashBoardWrapper {
+  height: 100%;
+  width: 100%;
+
+
+  /* LEFT DRAWER MENU */
+  .leftDrawerWrapper {
+    height: 100%;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 7px 0;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    .closeButton {
+      background: url("../../assets/images/icons/close_button.svg") center;
+      width: 25px;
+      height: 25px;
+      position: fixed;
+      left: 215px;
+      top: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .drawerHeader {
+      margin: 45px 0;
+      border-bottom: 1px solid $lineColor;
+      text-align: center;
+
+      .profile--image {
+        height: 35px;
+        width: 35px;
+        background: $primaryBackgroundColor;
+        border: 1px solid #ff5900;
+        border-radius: 50px;
+        padding: 2px;
+        cursor: pointer;
+      }
+
+      #brand__name {
+        margin-top: 5px;
+        display: block;
+      }
+
+      #online {
+        height: 7px;
+        width: 7px;
+        background: green;
+        border-radius: 10px;
+        display: inline-block;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        margin: 5px 0;
+        line-height: 3;
+        font-size: 0.9rem;
+        padding: 0 15px;
+
+        .badge {
+          background: #993902;
+          float: right;
+          margin-top: 15px;
+        }
+
+        &:hover {
+          background: rgba(254, 213, 153, 0.3);
+        }
+      }
+
+      .selected li {
+        background: rgba(254, 213, 153, 0.3) !important;
+        border-left: 4px solid $lineColor;
+        color: $secondaryTextColor;
+      }
+    }
+  }
+  .showDrawer {
+    transform: translateX(0);
+    animation: leftDrawerAnimateIn 0.5s;
+  }
+  @-webkit-keyframes leftDrawerAnimateIn {
+    0% { display: block; transform: translateX(-250px); }
+    100% { display: block; transform: translateX(0); }
+  }
+  @-moz-keyframes leftDrawerAnimateIn {
+    0% { display: block; transform: translateX(-250px); }
+    100% { display: block; transform: translateX(0); }
+  }
+  @-ms-keyframes leftDrawerAnimateIn {
+    0% { display: block; transform: translateX(-250px); }
+    100% { display: block; transform: translateX(0); }
+  }
+  @-o-keyframes leftDrawerAnimateIn {
+    0% { display: block; transform: translateX(-250px); }
+    100% { display: block; transform: translateX(0); }
+  }
+  @keyframes leftDrawerAnimateIn {
+    0% { display: block; transform: translateX(-250px); }
+    100% { display: block; transform: translateX(0); }
+  }
+  .hideDrawer {
+    transform: translateX(-250px);
+    animation: leftDrawerAnimateOut 0.5s;
+  }
+  @-webkit-keyframes leftDrawerAnimateOut {
+    0% { display: block; transform: translateX(0); }
+    99% { display: block; transform: translateX(-245px); }
+    100% { display: none; transform: translateX(-250px); }
+  }
+  @-moz-keyframes leftDrawerAnimateOut {
+    0% { display: block; transform: translateX(0); }
+    99% { display: block; transform: translateX(-245px); }
+    100% { display: none; transform: translateX(-250px); }
+  }
+  @-ms-keyframes leftDrawerAnimateOut {
+    0% { display: block; transform: translateX(0); }
+    99% { display: block; transform: translateX(-245px); }
+    100% { display: none; transform: translateX(-250px); }
+  }
+  @-o-keyframes leftDrawerAnimateOut {
+    0% { display: block; transform: translateX(0); }
+    99% { display: block; transform: translateX(-245px); }
+    100% { display: none; transform: translateX(-250px); }
+  }
+  @keyframes leftDrawerAnimateOut {
+    0% { display: block; transform: translateX(0); }
+    99% { display: block; transform: translateX(-245px); }
+    100% { display: none; transform: translateX(-250px); }
+  }
+  .default {
+    display: none;
+  }
+
+
+  /* DASHBOARD MENU */
+  .dashBoardMenu {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+
+    .hamburger--icon {
+      border: 1px solid $lineColor;
+      border-radius: 5px;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .dashboard--title {
+      color: $secondaryTextColor;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+    };
+
+    .profileOptionWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .profile--image {
+        height: 35px;
+        width: 35px;
+        background: $primaryBackgroundColor;
+        border: 1px solid #ff5900;
+        border-radius: 50px;
+        padding: 2px;
+        cursor: pointer;
+      };
+
+      ul {
+        list-style-type: none;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+        top: 160px;
+
+        li {
+          padding: 8px 0;
+
+          .profileSettingsWrapper {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+              background: none;
+              border: 1px solid $lineColor;
+              color: $primaryTextColor;
+            }
+          }
+
+          &:last-child {
+            border-top: 1px solid $lineColor;
+            cursor: pointer;
+          }
+        }
+      };
+      .hide--dropdown {
+        display: block;
+      };
+
+    };
+  };
+
+};

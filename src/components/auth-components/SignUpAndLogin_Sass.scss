@@ -1,0 +1,106 @@
+//  Global Variables.
+$primaryTextColor: #efefef;
+$secondaryTextColor: #E96317;
+$lineColor: #993902;
+
+.SignUpAndLoginWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .formContainer {
+    height: fit-content;
+    min-width: 300px;
+    width: 390px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    color: $primaryTextColor;
+    font-family: 'Josefin Sans', sans-serif;
+
+    .form---heading {
+      font-size: 1.8rem;
+    }
+
+    .form---sub--heading {
+      color: $secondaryTextColor
+    }
+
+    .radio--button {
+      width: 2px !important;
+      cursor: pointer;
+    }
+
+    .inputBox {
+      width: 100%;
+      display: flex;
+      display: -ms-flexbox; /* For IE10 */
+      margin-bottom: 20px;
+      border: 1px solid #484848 !important;
+      padding-bottom: 0;
+      border-radius: 3px;
+
+      &:focus-within, &:hover {
+        border: 1px solid #E96317 !important;
+      };
+
+      .input--icons {
+        min-width: 35px;
+        padding: 10px 8px;
+      };
+      .input--icons--suffix {
+        min-width: 33px;
+        padding: 12px 8px;
+        cursor: pointer;
+      };
+
+      .form--input {
+        height: 30px;
+        min-width: 78%;
+        margin-top: 5px;
+        border: none;
+        color: $primaryTextColor;
+      };
+    };
+
+    .btn--custom {
+      background: linear-gradient(to bottom right, #962e00, #ff5900), transparent;
+      border-color: $lineColor;
+      padding: 10px !important;
+      color: $primaryTextColor;
+
+      &:hover {
+        background: transparent;
+        border-color: $lineColor;
+        color: $secondaryTextColor;
+      };
+    };
+
+    .btn--custom--outline {
+      width: 150px;
+      background: transparent;
+      border-color: rgba(165, 165, 165, 0.6);
+      border-radius: 8px;
+      padding: 6px 20px;
+      color: $secondaryTextColor;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $lineColor;
+      };
+
+      img {
+        height: 17px;
+      }
+    };
+
+    .already--signedUp {
+      color: $secondaryTextColor;
+      cursor: pointer;
+
+      &:hover {
+        color: $primaryTextColor;
+      }
+    };
+  };
+};

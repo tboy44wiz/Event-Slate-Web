@@ -1,0 +1,55 @@
+//  Global Variables.
+@import './src/App';
+
+
+
+//===================== HEADER ========================
+//=====================================================
+header {
+  .app--navBar {
+    border-bottom: 1px solid $lineColor;
+    padding: 30px 0 10px 0;
+
+    #brand_name {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.5rem;
+
+      span {
+        color: #ff5900;
+      }
+    };
+
+    .menu_link {
+      font-weight: bold;
+      font-size: small;
+    };
+  }
+}
+
+/*====================== FOOTER ========================*/
+/*======================================================*/
+footer {
+  .appFooterBar {
+    width: inherit;
+    border-top: 1px solid $lineColor;
+    line-height: 1;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.8rem;
+
+
+    .footer__link {
+      color: #ff5900 !important;
+      font-style: italic;
+
+      &:hover {
+        color: #ffffff !important;
+      }
+    }
+
+    .socialMediaIcons {
+      float: right;
+      margin-top: -40px;
+    }
+  }
+}
+
